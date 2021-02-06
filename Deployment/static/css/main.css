@@ -1,0 +1,112 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+:root {
+    --gray: #3d3a39;
+    font-size: 1.6rem;
+  }
+
+body{
+    background-color: var(--gray);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex input{
+    background-color: var(--gray);
+    border: none;
+    height: 2rem;
+    color: white;
+    font-size: 1rem;
+    width: 4rem;
+    text-align: center;
+    outline: none;
+}
+
+fieldset:focus-within{
+  border-color: #994976;
+}
+
+fieldset{
+  border-color: white;
+  transition: all 0.5s;
+}
+
+fieldset input{
+  transition: all 0.5s;
+}
+
+.d-flex input:focus{
+  border: none;
+}
+
+
+
+p, h1, h2, h3, h4{
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+button{
+  cursor: pointer;
+  border: solid;
+  display: block;
+  margin: 20px auto;
+  color: #994976;
+  background-color: var(--gray);
+  border-color:#994976;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  transition: all 0.5s;
+}
+
+button:hover{
+  background-color: #994976;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+fieldset legend{
+  color: white;
+  transition: all 0.5s;
+}
+
+
+fieldset:focus-within legend, fieldset:focus-within input{
+  color: #994976;
+}
+
+fieldset{
+  margin: 0 15px;
+  border-radius: 10px;
+  padding: 1px;
+  font-size: 0.7rem;
+}
+
+
+

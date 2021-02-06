@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+      <h1>Enter your Saber 11 test scores</h1>
+      <form action="{{ url_for('index_img') }}" mehtod="POST">
+        <div class="d-flex">
+          <fieldset>
+            <legend>Biología</legend>
+            <input type="number" name="biologia" placeholder={{ data['biologia'] if data != None }}>
+          </fieldset>
+          <fieldset>
+            <legend>Sociales</legend>
+            <input type="number" name="sociales" placeholder={{ data['sociales'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Filosofía</legend>
+            <input type="number" name="filosofia" placeholder={{ data['filosofia'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Física</legend>
+            <input type="number" name="fisica" placeholder={{ data['fisica'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Inglés</legend>
+            <input type="number" name="ingles" placeholder={{ data['ingles'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Lenguaje</legend>
+            <input type="number" name="lenguaje" placeholder={{ data['lenguaje'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Matemáticas</legend>
+            <input type="number" name="matematicas" placeholder={{ data['matematicas'] if data != None}}>
+          </fieldset>
+          <fieldset>
+            <legend>Química</legend>
+            <input type="number" name="quimica" placeholder={{ data['quimica'] if data != None}}>
+          </fieldset>
+        </div>
+        <button type="submit" formmethod="POST" formaction="{{ url_for('index_img') }}">Submit</button>
+
+      </form>
+      <img src="{{ url }}" alt="">
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('img[src=""]').hide();
+        $('img:not([src=""])').show();
+    });
+    </script>
+</body>
+
+
